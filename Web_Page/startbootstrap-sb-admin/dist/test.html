@@ -188,7 +188,9 @@ function myFunction() {
   cell6.innerHTML = imagen;
   cell7.innerHTML = documento;
   cell8.innerHTML = fecha;
-  cell9.innerHTML = "Test";
+  cell9.innerHTML = '<button class="btn btn-primary btn-xs my-xs-btn" type="button" onClick="changeRec(".$num.")" >'
+    + '<span class="glyphicon glyphicon-pencil"></span> Editar</button>' + '<button class="btn btn-primary btn-xs my-xs-btn" type="button" onClick="changeRec(".$num.")" >'
+    + '<span class="glyphicon glyphicon-pencil"></span> Borrar</button>';
 }
 </script>
 

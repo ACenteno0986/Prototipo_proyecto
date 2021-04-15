@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
+<html>
+<head>
+
+<meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
@@ -9,10 +10,10 @@
         <title>Documentos</title>
         <link href="css/styles.css" rel="stylesheet" />
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
-    </head>
-    <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+
+</head>
+<body class="sb-nav-fixed">
+<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
             <a class="navbar-brand" href="index.html"><img src="assets/img/dino.jpg" class="img-thumbnail" alt="..." width="60" height="60"> Francis, el asistente del curso!</a>
             
@@ -74,43 +75,44 @@
         <form>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ID:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" id="id">
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Tema:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" id="tema">
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Pregunta:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" id="pregunta">
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Respuesta:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" id="respuesta">
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Sticker:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" id="sticker">
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Imagen:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" id="imagen">
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Documento:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" id="documento">
           </div>
           
           <div class="md-form">
-  	    <input placeholder="Selected date" type="text" id="date-picker-example" class="form-control datepicker">
-            <label for="date-picker-example">Try me...</label>
+          	<label for="recipient-name" class="col-form-label">Fecha de envío:</label>
+  	    <input type="date" id="fecha" name="trip-start"
+       			value="2018-07-22">
 	  </div>
           
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-        <button type="button" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-primary" onclick="myFunction()">Guardar</button>
       </div>
     </div>
   </div>
@@ -123,11 +125,13 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i class="fas fa-plus fa-2x" aria-hidden="true"></i></button> 
 
       </span>
-      <table class="table table-bordered table-responsive-md table-striped text-center">
-        <thead>
+
+<table id="myTable" class="table table-bordered table-responsive-md table-striped text-center">
+<thead>
           <tr>
             <th class="text-center">ID</th>
             <th class="text-center">Tema</th>
+            <th class="text-center">Pregunta</th>
             <th class="text-center">Respuesta</th>
             <th class="text-center">Sticker</th>
             <th class="text-center">Imagen</th>
@@ -136,108 +140,9 @@
             <th class="text-center">Acciones</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td class="pt-3-half" contenteditable="true">Aurelia Vega</td>
-            <td class="pt-3-half" contenteditable="true">30</td>
-            <td class="pt-3-half" contenteditable="true">Deepends</td>
-            <td class="pt-3-half" contenteditable="true">Spain</td>
-            <td class="pt-3-half" contenteditable="true">Madrid</td>
-            <td class="pt-3-half">
-              <span class="table-up"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a
-              ></span>
-              <span class="table-down"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a
-              ></span>
-            </td>
-            <td>
-              <span class="table-remove"
-                ><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">
-                  Remove
-                </button></span
-              >
-            </td>
-          </tr>
-          <!-- This is our clonable table line -->
-          <tr>
-            <td class="pt-3-half" contenteditable="true">Guerra Cortez</td>
-            <td class="pt-3-half" contenteditable="true">45</td>
-            <td class="pt-3-half" contenteditable="true">Insectus</td>
-            <td class="pt-3-half" contenteditable="true">USA</td>
-            <td class="pt-3-half" contenteditable="true">San Francisco</td>
-            <td class="pt-3-half">
-              <span class="table-up"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a
-              ></span>
-              <span class="table-down"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a
-              ></span>
-            </td>
-            <td>
-              <span class="table-remove"
-                ><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">
-                  Remove
-                </button></span
-              >
-            </td>
-          </tr>
-          <!-- This is our clonable table line -->
-          <tr>
-            <td class="pt-3-half" contenteditable="true">Guadalupe House</td>
-            <td class="pt-3-half" contenteditable="true">26</td>
-            <td class="pt-3-half" contenteditable="true">Isotronic</td>
-            <td class="pt-3-half" contenteditable="true">Germany</td>
-            <td class="pt-3-half" contenteditable="true">Frankfurt am Main</td>
-            <td class="pt-3-half">
-              <span class="table-up"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a
-              ></span>
-              <span class="table-down"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a
-              ></span>
-            </td>
-            <td>
-              <span class="table-remove"
-                ><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">
-                  Remove
-                </button></span
-              >
-            </td>
-          </tr>
-          <!-- This is our clonable table line -->
-          <tr class="hide">
-            <td class="pt-3-half" contenteditable="true">Elisa Gallagher</td>
-            <td class="pt-3-half" contenteditable="true">31</td>
-            <td class="pt-3-half" contenteditable="true">Portica</td>
-            <td class="pt-3-half" contenteditable="true">United Kingdom</td>
-            <td class="pt-3-half" contenteditable="true">London</td>
-            <td class="pt-3-half">
-              <span class="table-up"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a
-              ></span>
-              <span class="table-down"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a
-              ></span>
-            </td>
-            <td>
-              <span class="table-remove"
-                ><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">
-                  Remove
-                </button></span
-              >
-            </td>
-          </tr>
-        </tbody>
-      </table>
+
+</table>
+
     </div>
   </div>
 </div>
@@ -251,6 +156,44 @@
                 </footer>
             </div>
         </div>
+
+        
+<script>
+function myFunction() {
+  var table = document.getElementById("myTable");
+  var id = document.getElementById("id").value;
+  var tema = document.getElementById("tema").value;
+  var pregunta = document.getElementById("pregunta").value;
+  var respuesta = document.getElementById("respuesta").value;
+  var sticker = document.getElementById("sticker").value;
+  var imagen = document.getElementById("imagen").value;
+  var documento = document.getElementById("documento").value;
+  var fecha = document.getElementById("fecha").value;
+  var Rows = table.rows.length;
+  var row = table.insertRow(Rows);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+  var cell7 = row.insertCell(6);
+  var cell8 = row.insertCell(7);
+  var cell9 = row.insertCell(8);
+  cell1.innerHTML = id;
+  cell2.innerHTML = tema;
+  cell3.innerHTML = pregunta;
+  cell4.innerHTML = respuesta;
+  cell5.innerHTML = sticker;
+  cell6.innerHTML = imagen;
+  cell7.innerHTML = documento;
+  cell8.innerHTML = fecha;
+  cell9.innerHTML = '<button class="btn btn-primary btn-xs my-xs-btn" type="button" onClick="changeRec(".$num.")" >'
+    + '<span class="glyphicon glyphicon-pencil"></span> Editar</button>' + '<button class="btn btn-primary btn-xs my-xs-btn" type="button" onClick="changeRec(".$num.")" >'
+    + '<span class="glyphicon glyphicon-pencil"></span> Borrar</button>';
+}
+</script>
+
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
@@ -260,5 +203,5 @@
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/datatables-demo.js"></script>
-    </body>
+</body>
 </html>
